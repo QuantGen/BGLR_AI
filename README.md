@@ -5,7 +5,7 @@
 ## Roadmap
 | Name | Use | Source | Status |
 |--------|--------|------|--------|
-| interceptOnly.md | Shows the most basic model one can run with BGLR | None | Pending |
+| `interceptOnly.md` | Shows the most basic model one can run with BGLR | None | Pending |
 | | | | |
 | | | | |
 | | | | |
