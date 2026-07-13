@@ -13,6 +13,8 @@ $$y=1\mu+\varepsilon.$$
 
 The following script shows how to fit this model, which will estimate $\mu$ and $Var(\varepsilon)=\sigma^2_{\varepsilon}$.
 
+**Simulating posterior samples for an intercept only model**
+
 ```r
  # simulating data
   mu=123
@@ -25,9 +27,10 @@ The following script shows how to fit this model, which will estimate $\mu$ and 
 
 ```
 
-Retrivying posterior means and posterior SDs.
+**Retrivying posterior means and posterior SDs.**
 
 ```r
+
  # sample meqan versus posterior mean of mu (MOM versus posterior mean)
   round(`MOM`=c(mean(y), `Bayes`=fm$mu), 4)
 
