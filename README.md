@@ -7,6 +7,6 @@
 |--------|--------|------|------|--------|
 | `interceptOnly.md` | Shows the most basic model one can run with BGLR | Simulated | None | Pending |
 | `fixedEffects.md` | <ul><li> Linear regression w/factors and covariates</li><li>  Posterior means and posterior SD</li><li>  Trace plots</li><li> Posterior density plots</li><li> Posterior credibility regions</li><li> Posterior (co)variance of estimates </li></ul> | [wages](https://github.com/gdlc/STAT_COMP/blob/master/DATA/wages.txt) |None | Pending |
-| `BayesianAlphabet.md` | <ul><li> Linear regression on SNPs (large p) </li><li> Shrinkage and Variable Selection  </li></ul> | Simulated using mice genotypes | [BGLR-R](https://github.com/gdlc/BGLR-R/blob/master/inst/md/BayesianAlphabet.md)| Pending |
 
+| `BayesianAlphabet.md` | <ul><li> Linear regression on SNPs (large p) </li><li> Shrinkage and Variable Selection  </li></ul> | Simulated using mice genotypes | [BGLR-R](https://github.com/gdlc/BGLR-R/blob/master/inst/md/BayesianAlphabet.md)| Pending |
 | | | | | | |
