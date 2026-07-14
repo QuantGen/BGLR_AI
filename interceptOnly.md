@@ -24,18 +24,15 @@ The following script shows how to fit this model, which will estimate $\mu$ and 
 
 # fitting the model
  fm=BGLR(y=y, nIter=6000,burnIn=1000, verbose=FALSE)
-
 ```
 
 **Retrivying posterior means and posterior SDs.**
 
 ```r
-
  # sample meqan versus posterior mean of mu (MOM versus posterior mean)
-  round(`MOM`=c(mean(y), `Bayes`=fm$mu), 4)
+  round(c("MOM"=mean(y), "Bayes"=fm$mu), 4)
 
 # Error variance (MOM versus posterior mean)
-  c(`MOM`=var(y),`Bayes`=fm$varE)
-
+ round( c("MOM"=var(y),"Bayes"=fm$varE),4)
 ```
 
