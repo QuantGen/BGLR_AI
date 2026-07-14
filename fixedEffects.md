@@ -25,7 +25,7 @@
 
   # BGLR
 
-
+[Back to list of examples](https://github.com/QuantGen/BGLR_AI/#examples)
 
 ```
 
