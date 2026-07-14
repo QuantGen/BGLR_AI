@@ -1,8 +1,10 @@
 # BGLR AI: Resources to Power the use of AI with BGLR
 
+In this repository we will create a sequence of examples that can be used to train AI to write code for BGLR (including preparing the data, developing scripts to run models, extracting outputs and displaying results.
 
 
-## Roadmap
+## Examples
+
 | Name | Concepts| Data | Source | Status |
 |--------|--------|------|------|--------|
 | `interceptOnly.md` | Shows the most basic model one can run with BGLR | Simulated | None | To be reviewed |
