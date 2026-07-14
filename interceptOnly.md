@@ -16,6 +16,8 @@ The following script shows how to fit this model, which will estimate $\mu$ and 
 **Simulating posterior samples for an intercept only model**
 
 ```r
+ library(BGLR)
+
  # simulating data
   mu=123
   n=1000
