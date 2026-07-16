@@ -55,14 +55,19 @@
 
 ```r
   # posterior mean and posterior SD
-  c('Post-mean'=fm$varE,'Post-SD'=fm$SD.varE)
+  c('Post-mean'=fmB$varE,'Post-SD'=fmB$SD.varE)
 
-  vE=scan('varE.dat')
+  vE=scan('varE.dat') 
 
   # Trace plot
-   plot(vE,type='o',col=4)
+   plot(vE,type='o',col=4) ;abline(h=fmB$varE,col=2,lty=2, v=fmB$burnIn/fmB$thin,lwd=2)
 
+  # Posteriro credibility interval
+   # Removing burn-in
+   vE=vE[-c(1:(fmB$burnIn/fmB$thin))]
+   CR=quantile(vE,prob=.25,.975) # could use hig-posterior density intervals, e.g. in coda HPDinterval()
   # Posterior density plot
+   plot(density(vE),col=4);abline(v=CR,col=2)
 
 ```
 
