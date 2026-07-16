@@ -48,7 +48,11 @@
   colnames(RES.BAYES)=c('Post-mean','Post-SD')
   # Adding the intercept
   RES.BAYES=rbind('Intercept'=c(fmB$mu,fmB$SD.mu),RES.BAYES)
-  
+
+# Coefficients can also be extracted using coef.BGLR()
+ source('https://raw.githubusercontent.com/QuantGen/BGLR_AI/refs/heads/main/utils/utils.r')
+coef.BGLR(fmB)
+
 ```
 
 **Error variance**
@@ -85,7 +89,8 @@ When we use a formula to specify an element of the linear predictor (argument `E
 
  fmB2<-BGLR(y=DATA$wage, ETA=LP,nIter=12000,burnIn=2000,verbose=FALSE)
 
-
+ coef.BGLR(fmB)
+ coef.BGLR(fmB2)
 ```
 
 
