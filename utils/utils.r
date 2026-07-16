@@ -1,5 +1,4 @@
 # Extracts coefficients, including posterior means and posterior SD.
-
 coef.BGLR=function(fm){
 	
 	nTerms=length(fm$ETA)
