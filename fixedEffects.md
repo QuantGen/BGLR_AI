@@ -55,7 +55,7 @@
 
 ```r
   # posterior mean and posterior SD
-  c('Post-mean'=fm$varE,'Post-SD'=fm$SD.varE
+  c('Post-mean'=fm$varE,'Post-SD'=fm$SD.varE)
 
   vE=scan('varE.dat')
 
