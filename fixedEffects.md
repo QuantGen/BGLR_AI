@@ -57,7 +57,13 @@
   # posterior mean and posterior SD
   c('Post-mean'=fm$varE,'Post-SD'=fm$SD.varE
 
-  
+  vE=scan('varE.dat')
+
+  # Trace plot
+   plot(vE,type='o',col=4)
+
+  # Posterior density plot
+
 ```
 
 ## Using incidence matrices
