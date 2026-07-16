@@ -34,7 +34,9 @@
      fmB<-BGLR(y=DATA$wage, ETA=LP,nIter=12000,burnIn=2000,verbose=FALSE)
 ```
 
-**Inspecting output**
+## Output retrieval and formatting
+
+**Coefficients**
 
 
 ```r
@@ -49,7 +51,33 @@
   
 ```
 
-**Using incidence matrices**
+**Error variance**
+
+```r
+  # posterior mean and posterior SD
+  c('Post-mean'=fm$varE,'Post-SD'=fm$SD.varE
+
+  
+```
+
+## Using incidence matrices
+
+When we use a formula to specify an element of the linear predictor (argument `ETA` in BGLR), internally, BGLR uses the function `model.matrix()` to generate the corresponding incidence matrix which is used to represent th emodel in terms of matrices and vectors ($y=X\beta+\varepsilon$). In many cases, e.g., regression on SNPs, rather than using a formula interface it is better to pass the incidence matrix directly to BGLR. The following example shows how to fit the same model that was used above, in this casee, creating the model matrix outside BGLR.
+
+
+```r
+ # Incidence matrix (note: we remove the incidence vector for the intercept because an intercept will be always included by BGLR
+
+ XF=model.matrix(~education+region+sex+ethnicity+experience+union, data=DATA)[,-1]
+
+ LP=list( predictors=list( X=XF, model="FIXED",data=DATA))
+
+ fmB2<-BGLR(y=DATA$wage, ETA=LP,nIter=12000,burnIn=2000,verbose=FALSE)
+
+
+```
+
+
 
 
 
