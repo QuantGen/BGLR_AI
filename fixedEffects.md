@@ -65,7 +65,7 @@
   # Posteriro credibility interval
    # Removing burn-in
    vE=vE[-c(1:(fmB$burnIn/fmB$thin))]
-   CR=quantile(vE,prob=.25,.975) # could use hig-posterior density intervals, e.g. in coda HPDinterval()
+   CR=quantile(vE,prob=c(0.025,0.975)) # could use hig-posterior density intervals, e.g. in coda HPDinterval()
   # Posterior density plot
    plot(density(vE),col=4);abline(v=CR,col=2)
 
