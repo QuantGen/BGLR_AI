@@ -2,12 +2,6 @@
   "FixedEffectsLinearModel": {
     "category": "Regression",
     "subtype": "FixedEffects",
-    "related_models": [
-      "ANOVA",
-      "FixedEffectsInteractionModel",
-      "BayesianRegression",
-      "GBLUP"
-    ],
     "prerequisites": [
       "LinearModelTheory",
       "DesignMatrix",
