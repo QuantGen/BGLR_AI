@@ -1,0 +1,5 @@
+{
+  "BayesA": ["BayesianAlphabet", "Regression"],
+  "GBLUP": ["GenomicPrediction", "MixedModels"],
+  "MultiKernel": ["AdvancedModels", "KernelMethods"]
+}
