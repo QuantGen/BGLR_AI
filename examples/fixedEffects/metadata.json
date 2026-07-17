@@ -1,0 +1,12 @@
+{
+  "model_name": "FixedEffectsLinearModel",
+  "category": "regression",
+  "subtype": "fixed",
+  "description": "Ordinary linear model using only fixed effects with no random components.",
+  "inputs": ["design_matrix", "phenotype_vector"],
+  "outputs": ["coefficients", "fitted_values"],
+  "hyperparameters": {},
+  "dependencies": ["BGLR"],
+  "difficulty": "beginner",
+  "tags": ["fixed effects", "linear model", "regression"]
+}
