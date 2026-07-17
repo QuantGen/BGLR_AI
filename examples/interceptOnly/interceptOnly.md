@@ -37,3 +37,5 @@ The following script shows how to fit this model, which will estimate $\mu$ and 
 # Error variance (MOM versus posterior mean)
  round( c("MOM"=var(y),"Bayes"=fm$varE),4)
 ```
+
+[← Back to examples](../README.md)
