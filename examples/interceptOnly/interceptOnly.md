@@ -38,4 +38,4 @@ The following script shows how to fit this model, which will estimate $\mu$ and 
  round( c("MOM"=var(y),"Bayes"=fm$varE),4)
 ```
 
-[← Back to examples](README.md)
+[← Back to examples](https://github.com/QuantGen/BGLR_AI)
