@@ -1,0 +1,36 @@
+{
+  "dataset_name": "CPS Wages Sample",
+  "file_name": "wages.txt",
+  "source": "Current Population Survey (CPS) sample used in Introductory Econometrics (Harvard University Press).",
+  "description": "Cross-sectional dataset containing individual-level wage and demographic information, commonly used for econometrics examples involving wage determination, regression modeling, and demographic effects on earnings.",
+  "variables": {
+    "education": "Years of schooling completed.",
+    "region": "Geographic region of residence (North or South).",
+    "sex": "Sex of the individual (Male or Female).",
+    "ethnicity": "Ethnic group classification (Other, Hispanic, Black).",
+    "married": "Marital status (Yes or No).",
+    "experience": "Years of labor market experience.",
+    "union": "Union membership status (Unionized or Non-unionized).",
+    "wage": "Hourly wage."
+  },
+  "format": {
+    "type": "text",
+    "delimiter": "space-separated",
+    "header": true,
+    "notes": "Categorical variables should be converted to factors or dummy variables for modeling."
+  },
+  "use_cases": [
+    "Fixed-effects regression examples",
+    "Linear regression with factors and covariates",
+    "Dummy-variable encoding demonstrations",
+    "Wage equation modeling",
+    "Bayesian regression examples",
+    "Model interpretation and diagnostics"
+  ],
+  "notes": [
+    "Dataset contains observations from two regions: North and South.",
+    "Several categorical variables have multiple levels.",
+    "Wage values vary widely, useful for illustrating heteroskedasticity and leverage.",
+    "No missing values are present in the provided sample."
+  ]
+}
