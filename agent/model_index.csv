@@ -1,0 +1,2 @@
+model_name,category,subtype,difficulty,tags,path,inputs,outputs,description
+FixedEffectsLinearModel,regression,fixed,beginner,"fixed effects;linear model","examples/regression/fixedEffects/",design_matrix|phenotype_vector,fitted_values|coefficients,"Ordinary linear model using only fixed effects with no random components."
