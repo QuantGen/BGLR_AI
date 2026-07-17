@@ -1,3 +1,3 @@
 model_name,category,subtype,difficulty,tags,path,inputs,outputs,description
-InterceptOnlyModel,regression,intercept,beginner,"intercept;baseline model","examples/regression/interceptOnly/",phenotype_vector,intercept|residual_variance,"Gaussian regression model with no predictors, estimating only the intercept and residual variance."
-FixedEffectsLinearModel,regression,fixed,beginner,"fixed effects;linear model","examples/regression/fixedEffects/",design_matrix|phenotype_vector,fitted_values|coefficients,"Ordinary linear model using only fixed effects with no random components."
+InterceptOnlyModel,regression,intercept,beginner,"intercept;baseline model","examples/interceptOnly/",phenotype_vector,intercept|residual_variance,"Gaussian regression model with no predictors, estimating only the intercept and residual variance."
+FixedEffectsLinearModel,regression,fixed,beginner,"fixed effects;linear model","examples/fixedEffects/",design_matrix|phenotype_vector,fitted_values|coefficients,"Ordinary linear model using only fixed effects with no random components."
