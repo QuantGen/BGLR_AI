@@ -8,7 +8,13 @@
       "OrdinaryLeastSquares"
     ],
     "concepts": [
-      "FixedEffects",
+      "Linear regression w/factors and covariates"
+      "Posterior means and posterior SD",
+      "Trace plots",
+      "Posterior density plots",
+      "Posterior credibility regions",
+      "Posterior (co)variance of estimates", 
+      "Fixed Effects",
       "Intercept",
       "Covariates",
       "DummyVariables",
