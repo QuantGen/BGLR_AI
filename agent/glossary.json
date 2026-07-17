@@ -1,3 +1,13 @@
 {
-  "Fixed Effects": ["Population‑level averages."],
+  "Linear regression w/factors and covariates": "A linear model that includes both numerical predictors (covariates) and categorical predictors (factors). Factors are represented using dummy variables, allowing the model to estimate mean differences between groups while adjusting for continuous covariates.",
+  "Posterior means and posterior SD": "Summary statistics of a Bayesian posterior distribution. The posterior mean is the expected value of a parameter after observing the data, and the posterior standard deviation measures uncertainty around that estimate.",
+  "Trace plots": "Diagnostic plots showing the sampled values of a parameter across iterations of an MCMC chain. They help assess convergence, mixing, and whether the chain has explored the posterior distribution adequately.",
+  "Posterior density plots": "Plots showing the estimated probability density of a parameter’s posterior distribution. They visualize the shape, spread, and central tendency of the posterior, helping interpret uncertainty and parameter behavior.",
+  "Posterior credibility regions": "Bayesian intervals that contain a specified proportion of the posterior distribution (e.g., 95%). They represent the range of parameter values most supported by the data, providing a probabilistic interpretation of uncertainty.",
+  "Posterior (co)variance of estimates": "Posterior variance quantifies uncertainty in individual parameter estimates, while posterior covariance measures how two parameters vary together in the posterior distribution. These values reflect relationships between parameters.",
+  "Fixed Effects": "Model terms whose coefficients are estimated as constant values across all observations. They represent systematic, population-level effects such as treatment groups, environmental covariates, or known predictors.",
+  "Intercept": "The baseline value of the response when all predictors are set to zero. It represents the overall mean level of the outcome before accounting for covariates or factors.",
+  "Covariates": "Continuous or numerical predictors included in a model to explain variation in the response. Covariates may represent environmental conditions, measurements, or other quantitative features.",
+  "DummyVariables": "Binary indicator variables used to encode categorical factors in regression models. Each dummy variable represents one level of a factor, allowing the model to estimate group differences.",
+  "CoefficientEstimation": "The process of determining the numerical values of model parameters. In linear regression, coefficients quantify the effect of each predictor on the response. In Bayesian models, coefficients are estimated through posterior distributions."
 }
