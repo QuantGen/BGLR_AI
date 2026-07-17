@@ -1,5 +1,43 @@
 {
-  "BayesA": ["BayesianAlphabet", "Regression"],
-  "GBLUP": ["GenomicPrediction", "MixedModels"],
-  "MultiKernel": ["AdvancedModels", "KernelMethods"]
+  "FixedEffectsLinearModel": {
+    "category": "Regression",
+    "subtype": "FixedEffects",
+    "related_models": [
+      "ANOVA",
+      "FixedEffectsInteractionModel",
+      "BayesianRegression",
+      "GBLUP"
+    ],
+    "prerequisites": [
+      "LinearModelTheory",
+      "DesignMatrix",
+      "OrdinaryLeastSquares"
+    ],
+    "concepts": [
+      "FixedEffects",
+      "Intercept",
+      "Covariates",
+      "DummyVariables",
+      "CoefficientEstimation"
+    ],
+    "contrasts_with": [
+      "RandomEffectsModel",
+      "MixedModel",
+      "BayesianShrinkageModels"
+    ],
+    "inputs": [
+      "DesignMatrix",
+      "PhenotypeVector"
+    ],
+    "outputs": [
+      "Coefficients",
+      "FittedValues"
+    ],
+    "use_cases": [
+      "Estimating mean differences",
+      "Correcting for covariates",
+      "Teaching basic regression",
+      "Preprocessing before genomic prediction"
+    ]
+  }
 }
