@@ -92,3 +92,5 @@ When we use a formula to specify an element of the linear predictor (argument `E
  coef.BGLR(fmB)
  coef.BGLR(fmB2)
 ```
+
+[← Back to examples](https://github.com/QuantGen/BGLR_AI)
