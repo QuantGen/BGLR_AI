@@ -1,5 +1,5 @@
 {
-  "FixedEffectsLinearModel": {
+  "FixedEffects": {
     "category": "Regression",
     "subtype": "FixedEffects",
     "prerequisites": [
@@ -14,7 +14,7 @@
       "DummyVariables",
       "CoefficientEstimation"
     ],
-    "contrasts_with": [
+    "utils": [
       "RandomEffectsModel",
       "MixedModel",
       "BayesianShrinkageModels"
