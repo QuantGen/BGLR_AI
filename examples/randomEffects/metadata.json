@@ -1,0 +1,28 @@
+{
+  "model_name": "RandomEffectsModel",
+  "category": "regression",
+  "subtype": "random",
+  "description": "Gaussian random-effects model (RKHS) where correlated random effects u ~ N(0, K*varU) are estimated together with the variance components and heritability.",
+  "inputs": ["covariance_matrix", "phenotype_vector"],
+  "outputs": ["random_effects", "variance_components", "heritability"],
+  "hyperparameters": {
+    "nIter": "Number of MCMC iterations",
+    "burnIn": "Number of burn-in iterations"
+  },
+  "dependencies": ["BGLR"],
+  "difficulty": "intermediate",
+  "tags": ["random effects", "RKHS", "variance components", "heritability", "GBLUP"],
+  "concepts": [
+    "Random Effects",
+    "Covariance structure (kernel)",
+    "Variance components",
+    "Heritability",
+    "Posterior means and posterior SD",
+    "Trace plots",
+    "Posterior credibility regions",
+    "CoefficientEstimation"
+  ],
+  "data": null,
+  "source": "https://github.com/gdlc/BGLR-R/blob/master/inst/md/RKHS.md",
+  "path": "examples/randomEffects/randomEffects.md"
+}

@@ -11,5 +11,13 @@
   },
   "dependencies": ["BGLR"],
   "difficulty": "beginner",
-  "tags": ["intercept", "baseline model", "regression", "variance estimation"]
+  "tags": ["intercept", "baseline model", "regression", "variance estimation"],
+  "concepts": [
+    "Intercept",
+    "Posterior means and posterior SD",
+    "CoefficientEstimation"
+  ],
+  "data": null,
+  "source": null,
+  "path": "examples/interceptOnly/interceptOnly.md"
 }

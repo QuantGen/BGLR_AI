@@ -5,8 +5,27 @@
   "description": "Ordinary linear model using only fixed effects with no random components.",
   "inputs": ["design_matrix", "phenotype_vector"],
   "outputs": ["coefficients", "fitted_values"],
-  "hyperparameters": {},
+  "hyperparameters": {
+    "nIter": "Number of MCMC iterations",
+    "burnIn": "Number of burn-in iterations"
+  },
   "dependencies": ["BGLR"],
   "difficulty": "beginner",
-  "tags": ["fixed effects", "linear model", "regression"]
+  "tags": ["fixed effects", "linear model", "regression"],
+  "concepts": [
+    "Linear regression w/factors and covariates",
+    "Posterior means and posterior SD",
+    "Trace plots",
+    "Posterior density plots",
+    "Posterior credibility regions",
+    "Posterior (co)variance of estimates",
+    "Fixed Effects",
+    "Intercept",
+    "Covariates",
+    "DummyVariables",
+    "CoefficientEstimation"
+  ],
+  "data": "data/wages/wages.txt",
+  "source": null,
+  "path": "examples/fixedEffects/fixedEffects.md"
 }

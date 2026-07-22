@@ -1,4 +1,33 @@
 {
+  "InterceptOnly": {
+    "category": "Regression",
+    "subtype": "InterceptOnly",
+    "prerequisites": [
+      "LinearModelTheory",
+      "GaussianLikelihood",
+      "BayesianInference"
+    ],
+    "concepts": [
+      "Intercept",
+      "Posterior means and posterior SD",
+      "CoefficientEstimation"
+    ],
+    "related_models": [
+      "FixedEffects"
+    ],
+    "inputs": [
+      "PhenotypeVector"
+    ],
+    "outputs": [
+      "Intercept",
+      "ResidualVariance"
+    ],
+    "use_cases": [
+      "Baseline model",
+      "Variance estimation",
+      "Teaching basic Bayesian regression"
+    ]
+  },
   "FixedEffects": {
     "category": "Regression",
     "subtype": "FixedEffects",
@@ -8,19 +37,19 @@
       "OrdinaryLeastSquares"
     ],
     "concepts": [
-      "Linear regression w/factors and covariates"
+      "Linear regression w/factors and covariates",
       "Posterior means and posterior SD",
       "Trace plots",
       "Posterior density plots",
       "Posterior credibility regions",
-      "Posterior (co)variance of estimates", 
+      "Posterior (co)variance of estimates",
       "Fixed Effects",
       "Intercept",
       "Covariates",
       "DummyVariables",
       "CoefficientEstimation"
     ],
-    "utils": [
+    "related_models": [
       "RandomEffectsModel",
       "MixedModel",
       "BayesianShrinkageModels"
@@ -38,6 +67,46 @@
       "Correcting for covariates",
       "Teaching basic regression",
       "Preprocessing before genomic prediction"
+    ]
+  },
+  "RandomEffects": {
+    "category": "Regression",
+    "subtype": "RandomEffects",
+    "prerequisites": [
+      "LinearModelTheory",
+      "MixedModelTheory",
+      "CovarianceStructures",
+      "BayesianInference"
+    ],
+    "concepts": [
+      "Random Effects",
+      "Covariance structure (kernel)",
+      "Variance components",
+      "Heritability",
+      "Posterior means and posterior SD",
+      "Trace plots",
+      "Posterior credibility regions",
+      "CoefficientEstimation"
+    ],
+    "related_models": [
+      "FixedEffects",
+      "MixedModel",
+      "BayesianShrinkageModels"
+    ],
+    "inputs": [
+      "CovarianceMatrix",
+      "PhenotypeVector"
+    ],
+    "outputs": [
+      "RandomEffects",
+      "VarianceComponents",
+      "Heritability"
+    ],
+    "use_cases": [
+      "Genomic prediction (GBLUP)",
+      "Estimating variance components",
+      "Heritability estimation",
+      "Modeling correlated effects"
     ]
   }
 }
