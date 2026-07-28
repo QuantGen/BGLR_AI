@@ -50,9 +50,7 @@
       "CoefficientEstimation"
     ],
     "related_models": [
-      "RandomEffectsModel",
-      "MixedModel",
-      "BayesianShrinkageModels"
+      "MixedModel"
     ],
     "inputs": [
       "DesignMatrix",
@@ -67,46 +65,6 @@
       "Correcting for covariates",
       "Teaching basic regression",
       "Preprocessing before genomic prediction"
-    ]
-  },
-  "RandomEffects": {
-    "category": "Regression",
-    "subtype": "RandomEffects",
-    "prerequisites": [
-      "LinearModelTheory",
-      "MixedModelTheory",
-      "CovarianceStructures",
-      "BayesianInference"
-    ],
-    "concepts": [
-      "Random Effects",
-      "Covariance structure (kernel)",
-      "Variance components",
-      "Heritability",
-      "Posterior means and posterior SD",
-      "Trace plots",
-      "Posterior credibility regions",
-      "CoefficientEstimation"
-    ],
-    "related_models": [
-      "FixedEffects",
-      "MixedModel",
-      "BayesianShrinkageModels"
-    ],
-    "inputs": [
-      "CovarianceMatrix",
-      "PhenotypeVector"
-    ],
-    "outputs": [
-      "RandomEffects",
-      "VarianceComponents",
-      "Heritability"
-    ],
-    "use_cases": [
-      "Genomic prediction (GBLUP)",
-      "Estimating variance components",
-      "Heritability estimation",
-      "Modeling correlated effects"
     ]
   }
 }
