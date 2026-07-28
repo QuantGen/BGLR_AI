@@ -6,7 +6,7 @@
  - Linear regression with factors and covariates
  - Model specification using a formula interface versus pre-build incidence matrices
  - Using flat priors in a regression model
- - Posterior means, posterior SDs
+ - Posterior means, posterior SDs.
  - Convergence assessments
 
 ## Fitting a linear regression in BGLR using a flat prior 
