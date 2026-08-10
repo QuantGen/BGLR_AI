@@ -23,8 +23,7 @@ alt_of: [fixedeffects-fit-incidence]
 see_also: [fixedeffects-fit-incidence, posthoc-coef-manual, posthoc-errorvar-summary]
 -->
 
-BGLR implements regression models of the form $y_i=mu+\eta_i+\varepsilon_i$. Where $y_i$ is a phenotype, $\mu$ is an intercept, $\eta_i$ is the expected value of $y_i$ given predictors and $\varpsilon_i$ is a Gaussian error term. The linear predictor ($\eta_i$) can have several terms and it is specified using the argument (`ETA`, a list). If a term in this list has a formula, internally, BGLR
-calls `model.matrix()` on the formula to build the incidence matrix.
+BGLR implements Bayesian Generalized Additive Linear Models (BGALM). This example illustrates how to fit a linear regression of an outcome (wages) on quantitative and qualitative predictors whose effects are assigned flat priors. In the example the linear predictor of the BGALM (`ETA`) is specified using a formula. When this happens, BGLR calls `model.matrix()` on the formula to build the incidence matrix.
 
 ```r
 # Reading the data
