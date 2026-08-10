@@ -15,7 +15,7 @@
 <!--kb
 id: fixedeffects-fit-formula
 agent: coding
-prompt: Fit a linear regression of wage on education, region, sex, ethnicity, experience, and union status using BGLR with a formula interface.
+prompt: Fit a linear regression with flat priors (aka fixed effects) using BGLR with a formula interface.
 requires: [DATA]
 produces: [fmB]
 tags: {function: BGLR, model_family: fixed_effects, interface: formula}
@@ -23,8 +23,7 @@ alt_of: [fixedeffects-fit-incidence]
 see_also: [fixedeffects-fit-incidence, posthoc-coef-manual, posthoc-errorvar-summary]
 -->
 
-BGLR implements regression models of the form $y=1\mu+\eta+\varepsilon`. Here, mirrors the syntax of base-R `lm()`, but the model is specified through a
-linear predictor list (`ETA`) rather than a single formula. Internally, BGLR
+BGLR implements regression models of the form $y_i=mu+\eta_i+\varepsilon_i$. Where $y_i$ is a phenotype, $\mu$ is an intercept, $\eta_i$ is the expected value of $y_i$ given predictors and $\varpsilon_i$ is a Gaussian error term. The linear predictor ($\eta_i$) can have several terms and it is specified using the argument (`ETA`, a list). If a term in this list has a formula, internally, BGLR
 calls `model.matrix()` on the formula to build the incidence matrix.
 
 ```r
@@ -80,7 +79,6 @@ fmB2 <- BGLR(y = DATA$wage, ETA = LP, nIter = 12000, burnIn = 2000, verbose = FA
 
 **See also:** [Formula version](#formula-interface) · [Compare coefficients across both fits](#compare-coefficients-across-interfaces)
 
----
 
 ## Output retrieval and formatting
 
