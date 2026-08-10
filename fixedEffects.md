@@ -23,7 +23,7 @@ alt_of: [fixedeffects-fit-incidence]
 see_also: [fixedeffects-fit-incidence, posthoc-coef-manual, posthoc-errorvar-summary]
 -->
 
-BGLR implements Bayesian Generalized Additive Linear Models (BGALM). This example illustrates how to fit a linear regression of an outcome (wages) on quantitative and qualitative predictors whose effects are assigned flat priors. In the example the linear predictor of the BGALM (`ETA`) is specified using a formula. When this happens, BGLR calls `model.matrix()` on the formula to build the incidence matrix.
+BGLR implements Bayesian Generalized Additive Linear Models (BGALM). This example illustrates how to fit a linear regression of an outcome (wages) on quantitative and qualitative predictors whose effects are assigned flat priors. In the example the linear predictor of the BGALM (`ETA`) is specified using a formula.
 
 ```r
 # Reading the data
