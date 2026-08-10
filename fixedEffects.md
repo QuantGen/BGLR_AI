@@ -23,7 +23,7 @@ alt_of: [fixedeffects-fit-incidence]
 see_also: [fixedeffects-fit-incidence, posthoc-coef-manual, posthoc-errorvar-summary]
 -->
 
-BGLR mirrors the syntax of base-R `lm()`, but the model is specified through a
+BGLR implements regression models of the form $y=1\mu+\eta+\varepsilon`. Here, mirrors the syntax of base-R `lm()`, but the model is specified through a
 linear predictor list (`ETA`) rather than a single formula. Internally, BGLR
 calls `model.matrix()` on the formula to build the incidence matrix.
 
