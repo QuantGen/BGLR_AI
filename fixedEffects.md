@@ -52,7 +52,7 @@ fmB <- BGLR(y = DATA$wage, ETA = LP, nIter = 12000, burnIn = 2000, verbose = FAL
 <!--kb
 id: fixedeffects-fit-incidence
 agent: coding
-prompt: Fit the same fixed-effects regression in BGLR, but by passing a pre-built incidence matrix instead of a formula.
+prompt: Fit a fixed-effects regression in BGLR using a pre-built incidence matrix.
 requires: [DATA]
 produces: [fmB2]
 tags: {function: BGLR, model_family: fixed_effects, interface: incidence_matrix}
@@ -80,6 +80,7 @@ fmB2 <- BGLR(y = DATA$wage, ETA = LP, nIter = 12000, burnIn = 2000, verbose = FA
 
 ## Output retrieval and formatting
 
+As BGLR runs it saves posterior samples (see files with `.dat` extension) once the sampling process has finished it computes posterior means and posterior
 ### Coefficients — manual extraction
 
 <!--kb
@@ -110,7 +111,7 @@ RES.BAYES <- rbind('Intercept' = c(fmB$mu, fmB$SD.mu), RES.BAYES)
 ### Coefficients via `coef.BGLR()` helper
 
 <!--kb
-id: posthoc-coef-helper
+id: coef.BGLR-use
 agent: posthoc
 prompt: Extract posterior means and SDs of regression coefficients from a fitted BGLR model using the coef.BGLR() helper function, instead of extracting them manually.
 requires: [fmB, utils.r sourced]
