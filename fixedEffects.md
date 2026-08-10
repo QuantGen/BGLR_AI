@@ -46,7 +46,6 @@ fmB <- BGLR(y = DATA$wage, ETA = LP, nIter = 12000, burnIn = 2000, verbose = FAL
 
 **See also:** [Incidence-matrix version](#incidence-matrix-interface) · [Extract coefficients](#coefficients-manual-extraction) · [Error variance summary](#posterior-mean-and-sd)
 
----
 
 ### Incidence matrix interface
 
@@ -108,8 +107,6 @@ RES.BAYES <- rbind('Intercept' = c(fmB$mu, fmB$SD.mu), RES.BAYES)
 
 **See also:** [Simpler: `coef.BGLR()` helper](#coefficients-via-coefbglr-helper)
 
----
-
 ### Coefficients via `coef.BGLR()` helper
 
 <!--kb
@@ -129,8 +126,6 @@ source('https://raw.githubusercontent.com/QuantGen/BGLR_AI/refs/heads/main/utils
 coef.BGLR(fmB)
 ```
 
----
-
 ### Posterior mean and SD (error variance)
 
 <!--kb
@@ -146,8 +141,6 @@ see_also: [posthoc-errorvar-trace, posthoc-errorvar-interval]
 ```r
 c('Post-mean' = fmB$varE, 'Post-SD' = fmB$SD.varE)
 ```
-
----
 
 ### Trace plot of the error variance
 
@@ -172,8 +165,6 @@ plot(vE, type = 'o', col = 4)
 abline(h = fmB$varE, col = 2, lty = 2, v = fmB$burnIn / fmB$thin, lwd = 2)
 ```
 
----
-
 ### Posterior credibility interval
 
 <!--kb
@@ -195,7 +186,6 @@ vE <- vE[-c(1:(fmB$burnIn / fmB$thin))]
 CR <- quantile(vE, prob = c(0.025, 0.975))
 ```
 
----
 
 ### Posterior density plot
 
