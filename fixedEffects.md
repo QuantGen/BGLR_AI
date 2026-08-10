@@ -1,7 +1,6 @@
 # Fixed Effects Model with BGLR
 
 ## Key concepts
-
 - Linear regression with factors and covariates
 - Model specification using a formula interface versus pre-built incidence matrices
 - Using flat priors in a regression model
