@@ -8,7 +8,6 @@
 - Posterior means, posterior SDs
 - Convergence assessment
 
----
 
 ## Fitting a linear regression in BGLR using a flat prior
 
