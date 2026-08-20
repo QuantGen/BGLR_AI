@@ -15,7 +15,7 @@
 id: fixedeffects-fit-formula
 agent: coding
 prompt: Fit a linear regression with flat priors (aka fixed effects) using BGLR with a formula interface.
-requires: [DATA]
+requires: [data/wages.txt]
 produces: [fmB]
 tags: {function: BGLR, model_family: fixed_effects, interface: formula}
 alt_of: [fixedeffects-fit-incidence]
@@ -26,7 +26,7 @@ BGLR implements Bayesian Generalized Additive Linear Models (BGALM). This exampl
 
 ```r
 # Reading the data
-folder <- 'https://raw.githubusercontent.com/QuantGen/BGLR_AI/refs/heads/main/DATA/'
+folder <- 'https://raw.githubusercontent.com/QuantGen/BGLR_AI/refs/heads/main/data/'
 fname  <- 'wages.txt'
 DATA   <- read.table(paste0(folder, '/', fname), header = TRUE, sep = '')
 
