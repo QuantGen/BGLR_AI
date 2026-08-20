@@ -15,6 +15,18 @@ The following script shows how to fit this model, which will estimate $\mu$ and 
 
 **Simulating posterior samples for an intercept only model**
 
+<!--kb
+id: intercept-only-model
+agent: coding
+prompt: Fit an intercept-only model using BGLR.
+requires: 
+produces:
+tags: {function: BGLR}
+alt_of: 
+see_also: [fixedeffects]
+-->
+
+
 ```r
  library(BGLR)
 
@@ -28,10 +40,23 @@ The following script shows how to fit this model, which will estimate $\mu$ and 
  fm=BGLR(y=y, nIter=6000,burnIn=1000, verbose=FALSE)
 ```
 
-**Retrivying posterior means and posterior SDs.**
+**Retrieving posterior means and posterior SDs.**
+
+
+<!--kb
+id: intercept-only-model
+agent: coding
+prompt: Extract posterior means of the intercept and error variance of a model using BGLR, compare with the corresponding method of moments (MOM) estimates.
+requires: 
+produces:
+tags: {function: BGLR}
+alt_of: 
+see_also: [intercept-only-model]
+-->
+
 
 ```r
- # sample meqan versus posterior mean of mu (MOM versus posterior mean)
+ # sample mean versus posterior mean of mu (MOM versus posterior mean)
   round(c("MOM"=mean(y), "Bayes"=fm$mu), 4)
 
 # Error variance (MOM versus posterior mean)
