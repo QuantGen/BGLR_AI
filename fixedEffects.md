@@ -11,7 +11,7 @@
 
 ### Formula interface
 
-```yaml
+<!--kb
 id: fixedeffects-fit-formula
 agent: coding
 package: BGLR
@@ -19,7 +19,7 @@ model_type: fixed-effects
 interface: formula
 prompt: Fit a linear regression with flat priors (aka fixed effects) using BGLR with a formula interface.
 see_also: [fixedeffects-fit-incidence, posthoc-coef-manual, posthoc-errorvar-summary]
-```
+-->
 
 This example illustrates how to fit a linear regression of an outcome (wages) on factors (e.g., sex) and quantitative predictors (aka covariates, e.g., education) whose effects are assigned flat priors. In the example the linear predictor of the model (`ETA`) is specified using a formula.
 
