@@ -11,22 +11,21 @@
 
 ### Formula interface
 
-<!--kb
+```yaml
 id: fixedeffects-fit-formula
 agent: coding
+package: BGLR
+model_type: fixed-effects
+interface: formula
 prompt: Fit a linear regression with flat priors (aka fixed effects) using BGLR with a formula interface.
-requires: [data/wages.txt]
-produces: [fmB]
-tags: {function: BGLR, model_family: fixed_effects, interface: formula}
-alt_of: [fixedeffects-fit-incidence]
 see_also: [fixedeffects-fit-incidence, posthoc-coef-manual, posthoc-errorvar-summary]
--->
+```
 
-BGLR implements Bayesian Generalized Additive Linear Models (BGALM). This example illustrates how to fit a linear regression of an outcome (wages) on quantitative and qualitative predictors whose effects are assigned flat priors. In the example the linear predictor of the BGALM (`ETA`) is specified using a formula.
+This example illustrates how to fit a linear regression of an outcome (wages) on factors (e.g., sex) and quantitative predictors (aka covariates, e.g., education) whose effects are assigned flat priors. In the example the linear predictor of the model (`ETA`) is specified using a formula.
 
 ```r
 # Reading the data
-folder <- 'https://raw.githubusercontent.com/QuantGen/BGLR_AI/refs/heads/main/data/'
+folder <- 'https://raw.githubusercontent.com/QuantGen/BGLR_AI/refs/heads/main/data'
 fname  <- 'wages.txt'
 DATA   <- read.table(paste0(folder, '/', fname), header = TRUE, sep = '')
 
@@ -43,7 +42,6 @@ LP <- list(predictors = list(~education + region + sex + ethnicity + experience 
 fmB <- BGLR(y = DATA$wage, ETA = LP, nIter = 12000, burnIn = 2000, verbose = FALSE)
 ```
 
-**See also:** [Incidence-matrix version](#incidence-matrix-interface) · [Extract coefficients](#coefficients-manual-extraction) · [Error variance summary](#posterior-mean-and-sd)
 
 
 ### Incidence matrix interface
