@@ -1,7 +1,7 @@
 # An intercept only model
 
 
-BGLR fits Guassian models of the form
+BGLR fits Gaussian models of the form
 
 $$y=1\mu+X_1\beta_1+X_2\beta_2+...+u_1+u+2+...+\varepsilon$$
 
@@ -11,21 +11,17 @@ The terms of the linear predictor ($1\beta_1+X_2\beta_2+...+u_1+u+2$) are specif
 
 $$y=1\mu+\varepsilon.$$
 
-The following script shows how to fit this model, which will estimate $\mu$ and $Var(\varepsilon)=\sigma^2_{\varepsilon}$.
 
 **Simulating posterior samples for an intercept only model**
 
 <!--kb
 id: intercept-only-model
 agent: coding
+package: BGLR
 prompt: Fit an intercept-only model using BGLR.
-requires: 
-produces:
-tags: {function: BGLR}
-alt_of: 
-see_also: [fixedeffects]
 -->
 
+The following script shows how to fit this model, which will estimate $\mu$ and $Var(\varepsilon)=\sigma^2_{\varepsilon}$.
 
 ```r
  library(BGLR)
@@ -44,22 +40,21 @@ see_also: [fixedeffects]
 
 
 <!--kb
-id: intercept-only-model
+id: intercept-only-model-extract-estimates
 agent: coding
-prompt: Extract posterior means of the intercept and error variance of a model using BGLR, compare with the corresponding method of moments (MOM) estimates.
-requires: 
-produces:
-tags: {function: BGLR}
-alt_of: 
-see_also: [intercept-only-model]
+package: BGLR
+prompt: Extract posterior means of the intercept and error variance of a model using BGLR.
 -->
 
+The following script shows how to retrieve posterior means and posterior SD of the intercetp and the error variance.
 
 ```r
- # sample mean versus posterior mean of mu (MOM versus posterior mean)
-  round(c("MOM"=mean(y), "Bayes"=fm$mu), 4)
+ # Intercept
+  fm$mu #posterior mean
+  fm$SD.mu $ posterior SD
 
-# Error variance (MOM versus posterior mean)
- round( c("MOM"=var(y),"Bayes"=fm$varE),4)
+ # Error variance
+  fm$varE # posterior mean
+  fm$SD.varE # posterior SD
 ```
 
