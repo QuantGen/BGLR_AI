@@ -10,7 +10,7 @@
 ## Fitting a linear regression in BGLR using a flat prior
 
 ### Formula interface
-
+<!ch_start
 <!--kb
 id: fixedeffects-fit-formula
 agent: coding
@@ -27,7 +27,6 @@ fname  <- 'wages.txt'
 DATA   <- read.table(paste0(folder, '/', fname), header = TRUE, sep = '')
 
 library(BGLR)
-
 
 # BGLR: ETA is a 2-level list; formula interface calls model.matrix() internally
 LP <- list(predictors = list(~education + region + sex + ethnicity + experience + union,
