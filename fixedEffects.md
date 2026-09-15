@@ -10,13 +10,15 @@
 ## Fitting a linear regression in BGLR using a flat prior
 
 ### Formula interface
-<!--ch_start
-<!--kb
-id: fixedeffects-fit-formula
-agent: coding
-package: BGLR
-prompt: Fit a linear regression with flat priors (aka fixed effects) using BGLR with a formula interface.
--->
+
+
+
+ <!--kb
+  id: fixedeffects-fit-formula
+  agent: coding
+  package: BGLR
+  prompt: Fit a linear regression with flat priors (aka fixed effects) using BGLR with a formula interface.
+ -->
 
 This example illustrates how to fit a linear regression of an outcome (wages) on factors (e.g., sex) and quantitative predictors (aka covariates, e.g., education) whose effects are assigned flat priors. In the example the linear predictor of the model (`ETA`) is specified using a formula.
 
@@ -29,13 +31,12 @@ DATA   <- read.table(paste0(folder, '/', fname), header = TRUE, sep = '')
 library(BGLR)
 
 # BGLR: ETA is a 2-level list; formula interface calls model.matrix() internally
-LP <- list(predictors = list(~education + region + sex + ethnicity + experience + union,
+ LP <- list(predictors = list(~education + region + sex + ethnicity + experience + union,
                               model = "FIXED",
                               data = DATA))
 
-fm <- BGLR(y = DATA$wage, ETA = LP, nIter = 12000, burnIn = 2000, verbose = FALSE)
+ fm <- BGLR(y = DATA$wage, ETA = LP, nIter = 12000, burnIn = 2000, verbose = FALSE)
 ```
-
 
 
 ### Incidence matrix interface
