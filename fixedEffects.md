@@ -10,7 +10,7 @@
 ## Fitting a linear regression in BGLR using a flat prior
 
 ### Formula interface
-<!ch_start
+<!--ch_start
 <!--kb
 id: fixedeffects-fit-formula
 agent: coding
