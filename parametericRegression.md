@@ -19,6 +19,8 @@ Each of the following examples illustrates how to invoke each of the priors. Sin
 
 **1. Flat Prior (FIXED)**
 
+
+
 ```R
  library(BGLR)
  data(mice); X=scale(mice.X[,1:3000]); pheno=mice.pheno
