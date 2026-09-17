@@ -11,7 +11,7 @@
 
 ### Formula interface
 
-
+<!-- section_starts
 
  <!--kb
   id: fixedeffects-fit-formula
@@ -37,7 +37,7 @@ library(BGLR)
 
  fm <- BGLR(y = DATA$wage, ETA = LP, nIter = 12000, burnIn = 2000, verbose = FALSE)
 ```
-
+<!-- section_ends
 
 ### Incidence matrix interface
 
