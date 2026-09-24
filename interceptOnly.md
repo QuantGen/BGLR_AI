@@ -11,7 +11,7 @@ The terms of the linear predictor ($1\beta_1+X_2\beta_2+...+u_1+u+2$) are specif
 
 $$y=1\mu+\varepsilon.$$
 
-
+<!--chunk starts -->
 **Simulating posterior samples for an intercept only model**
 
 <!--kb
@@ -35,7 +35,7 @@ The following script shows how to fit this model, which will estimate $\mu$ and 
 # fitting the model
  fm=BGLR(y=y, nIter=6000,burnIn=1000, verbose=FALSE)
 ```
-
+<!--chunk starts -->
 **Retrieving posterior means and posterior SDs.**
 
 
