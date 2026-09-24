@@ -7,6 +7,7 @@
 - Posterior means, posterior SDs
 - Convergence assessment
 
+<!--chunk starts -->
 ## Fitting a linear regression in BGLR using a flat prior
 
 ### Formula interface
@@ -37,7 +38,7 @@ library(BGLR)
  fm <- BGLR(y = DATA$wage, ETA = LP, nIter = 12000, burnIn = 2000, verbose = FALSE)
 ```
 
-
+<!--chunk starts -->
 ### Incidence matrix interface
 
 <!--kb
@@ -67,6 +68,7 @@ fm2 <- BGLR(y = DATA$wage, ETA = LP, nIter = 12000, burnIn = 2000, verbose = FAL
 
 As BGLR runs, it saves posterior samples (see files with `.dat` extension) once the sampling process has finished it computes posterior means and posterior
 
+<!--chunk starts -->
 ### Coefficients — manual extraction
 
 <!--kb
@@ -86,7 +88,7 @@ colnames(RES.BAYES) <- c('Post-mean', 'Post-SD')
 # Add the intercept (stored separately on the fitted object)
 RES.BAYES <- rbind('Intercept' = c(fmB$mu, fmB$SD.mu), RES.BAYES)
 ```
-
+<!--chunk starts -->
 ### Coefficients via `coef.BGLR()` helper
 
 <!--kb
@@ -102,7 +104,7 @@ The function `coef.BGLR()` can be used to extract the estimated coefficients and
 source('https://raw.githubusercontent.com/QuantGen/BGLR_AI/refs/heads/main/utils/utils.r')
 coef.BGLR(fmB)
 ```
-
+<!--chunk starts -->
 ### Posterior mean and SD (error variance)
 
 <!--kb
@@ -116,6 +118,7 @@ prompt: Get the posterior mean and posterior SD of the residual (error) variance
 c('Post-mean' = fmB$varE, 'Post-SD' = fmB$SD.varE)
 ```
 
+<!--chunk starts -->
 ### Trace plot of the error variance
 
 <!--kb
@@ -131,6 +134,7 @@ prompt: Plot the MCMC trace of the error variance, with the posterior mean overl
  abline(h = fmB$varE, col = 2, lty = 2, v = fmB$burnIn / fmB$thin, lwd = 2)
 ```
 
+<!--chunk starts -->
 ### Posterior credibility interval
 
 <!--kb
@@ -148,7 +152,7 @@ vE <- vE[-c(1:(fmB$burnIn / fmB$thin))]
 CR <- quantile(vE, prob = c(0.025, 0.975))
 ```
 
-
+<!--chunk starts -->
 ### Posterior density plot
 
 <!--kb
