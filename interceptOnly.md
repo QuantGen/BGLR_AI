@@ -35,6 +35,8 @@ The following script shows how to fit this model, which will estimate $\mu$ and 
 # fitting the model
  fm=BGLR(y=y, nIter=6000,burnIn=1000, verbose=FALSE)
 ```
+<!--chunk ends -->
+
 <!--chunk starts -->
 **Retrieving posterior means and posterior SDs.**
 
@@ -57,4 +59,5 @@ The following script shows how to retrieve posterior means and posterior SD of t
   fm$varE # posterior mean
   fm$SD.varE # posterior SD
 ```
+<!--chunk ends -->
 
