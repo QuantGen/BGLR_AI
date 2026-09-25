@@ -15,11 +15,15 @@ The BGLR R-package allows users to select various priors for regression coeffici
 
 Each of the above priors have hyper-parameters, some of which are, by default estimated by treating them as random (e.g., variances, mixture proportions) and others (typically df and scales) are fixed. 
 
-Each of the following examples illustrates how to invoke each of the priors. Since BGLR admits one than more term in the linear predictor (`ETA`) these priors can be combine, assigning to some predictors some priors and other priors to other sets of predictors. 
+Each of the following examples illustrates how to invoke each of the priors. Since BGLR admits more than one term in the linear predictor (`ETA`) these priors can be combined, assigning to some predictors some priors and other priors to other sets of predictors. 
 
 **1. Flat Prior (FIXED)**
 
-
+<!--kb
+agent: coding
+package: BGLR
+prompt: Fit a parametric random regression using Flat Prior (FIXED)
+-->
 
 ```R
  library(BGLR)
@@ -44,6 +48,12 @@ Each of the following examples illustrates how to invoke each of the priors. Sin
 
 **3. Gaussian Prior (BRR, RR-BLUP, BLUP)**
 
+<!--kb
+agent: coding
+package: BGLR
+prompt: Fit a parametric random regression using Gaussian Prior (BRR, RR-BLUP, BLUP)
+-->
+
 ```R
  nIter=6000; burnIn=1000
  fmBRR=BGLR(y=y,ETA=list( list(X=X,model='BRR')), 
@@ -51,6 +61,12 @@ Each of the following examples illustrates how to invoke each of the priors. Sin
  plot(abs(fmBRR$ETA[[1]]$b),col=4,cex=.5, type='o',main='BRR');abline(v=QTL,col=2,lty=2)
 ```
 **4. Scaled-t (BayesA)**
+
+<!--kb
+agent: coding
+package: BGLR
+prompt: Fit a parametric random regression using Scaled-t Prior(BayesA)
+-->
 
 ```R
  fmBA=BGLR(y=y,ETA=list( list(X=X,model='BayesA')), 
@@ -61,6 +77,13 @@ Each of the following examples illustrates how to invoke each of the priors. Sin
 
 **5. Double-Exponential (Bayesian Lasso)**
 
+<!--kb
+agent: coding
+package: BGLR
+prompt: Fit a parametric random regression using Double-Exponential Prior(Bayesian Lasso)**
+)
+-->
+
 ```R
  fmBL=BGLR(y=y,ETA=list( list(X=X,model='BL')), 
             nIter=nIter,burnIn=burnIn,saveAt='bl_')
@@ -69,6 +92,14 @@ Each of the following examples illustrates how to invoke each of the priors. Sin
 ```
 
 **6. Point of mass at zero + Gaussian Slab (BayesC)**
+
+<!--kb
+agent: coding
+package: BGLR
+prompt: Fit a parametric random regression using Point of mass at zero and Gaussian Slab Prior(BayesC)**
+)
+-->
+
 ```R
  fmBC=BGLR(y=y,ETA=list( list(X=X,model='BayesC')), 
             nIter=nIter,burnIn=burnIn,saveAt='bc_')
@@ -76,12 +107,27 @@ Each of the following examples illustrates how to invoke each of the priors. Sin
 ```
 
 **7. Point of mass at zero + t-Slab (BayesB)**
+
+<!--kb
+agent: coding
+package: BGLR
+prompt: Fit a parametric random regression using Point of mass at zero and t-Slab Prior(BayesB)**
+)
+-->
+
 ```R
 fmBB=BGLR(y=y,ETA=list( list(X=X,model='BayesB')), 
             nIter=nIter,burnIn=burnIn,saveAt='bb_')
  plot(abs(fmBB$ETA[[1]]$b),col=4,cex=.5, type='o',main='BayesB');abline(v=QTL,col=2,lty=2)
 ```
 **8. Gaussian prior with set-specific variance (BRR_sets)**
+
+<!--kb
+agent: coding
+package: BGLR
+prompt: Fit a parametric random regression using Gaussian prior with set-specific variance (BRR_sets)**
+)
+-->
 
 ```R
 tmp=rep(1:ceiling(ncol(X)/5),each=5)[1:ncol(X)]
