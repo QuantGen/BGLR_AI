@@ -37,6 +37,7 @@ library(BGLR)
 
  fm <- BGLR(y = DATA$wage, ETA = LP, nIter = 12000, burnIn = 2000, verbose = FALSE)
 ```
+<!--chunk ends -->
 
 <!--chunk starts -->
 ### Incidence matrix interface
@@ -62,11 +63,12 @@ LP <- list(predictors = list(X = XF, model = "FIXED", data = DATA))
 
 fm2 <- BGLR(y = DATA$wage, ETA = LP, nIter = 12000, burnIn = 2000, verbose = FALSE)
 ```
-
+<!--chunk ends -->
 
 ## Output retrieval and formatting
 
 As BGLR runs, it saves posterior samples (see files with `.dat` extension) once the sampling process has finished it computes posterior means and posterior
+
 
 <!--chunk starts -->
 ### Coefficients — manual extraction
@@ -88,6 +90,8 @@ colnames(RES.BAYES) <- c('Post-mean', 'Post-SD')
 # Add the intercept (stored separately on the fitted object)
 RES.BAYES <- rbind('Intercept' = c(fmB$mu, fmB$SD.mu), RES.BAYES)
 ```
+<!--chunk ends -->
+
 <!--chunk starts -->
 ### Coefficients via `coef.BGLR()` helper
 
@@ -104,6 +108,8 @@ The function `coef.BGLR()` can be used to extract the estimated coefficients and
 source('https://raw.githubusercontent.com/QuantGen/BGLR_AI/refs/heads/main/utils/utils.r')
 coef.BGLR(fmB)
 ```
+<!--chunk ends -->
+
 <!--chunk starts -->
 ### Posterior mean and SD (error variance)
 
@@ -117,6 +123,7 @@ prompt: Get the posterior mean and posterior SD of the residual (error) variance
 ```r
 c('Post-mean' = fmB$varE, 'Post-SD' = fmB$SD.varE)
 ```
+<!--chunk ends -->
 
 <!--chunk starts -->
 ### Trace plot of the error variance
@@ -133,6 +140,7 @@ prompt: Plot the MCMC trace of the error variance, with the posterior mean overl
  plot(vE, type = 'o', col = 4)
  abline(h = fmB$varE, col = 2, lty = 2, v = fmB$burnIn / fmB$thin, lwd = 2)
 ```
+<!--chunk ends -->
 
 <!--chunk starts -->
 ### Posterior credibility interval
@@ -151,6 +159,7 @@ The following script uses posterior samples to compute 95% posterior credibility
 vE <- vE[-c(1:(fmB$burnIn / fmB$thin))]
 CR <- quantile(vE, prob = c(0.025, 0.975))
 ```
+<!--chunk ends -->
 
 <!--chunk starts -->
 ### Posterior density plot
@@ -168,4 +177,5 @@ The script shows how to construct a posterior density plot from posterior sample
 plot(density(vE), col = 4)
 abline(v = CR, col = 2)
 ```
+<!--chunk ends -->
 
