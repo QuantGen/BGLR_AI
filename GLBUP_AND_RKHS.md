@@ -5,11 +5,24 @@ In the following example we show how to fit a GBLUP model (i.e., a Gaussian proc
 
 ## Model
 
-The general form of the model is
+$$\mathbf{y}=\mathbf{1}\mu+\mathbf{u}+\boldsymbol{\varepsilon}$$
 
-$$\mathbf{y}=\mathbf{1}\mu+\mathbf{u}+\mathbf{\varepsilon}$$
+where $\mathbf{y}$ is an $n\times 1$ vector of phenotypes, $\mu$ is an intercept, $\mathbf{u}\sim MVN(\mathbf{0},\mathbf{G}\sigma^2_u)$ is a multivariate normal random vector with zero mean and a covariance matrix proportional to $\mathbf{G}$, and $\boldsymbol{\varepsilon}\sim MVN(\mathbf{0},\mathbf{I}\sigma^2_\varepsilon)$ is a vector of independent model residuals.
 
-where $\mathbf{y}$ is an $n\times 1$ vector of phenotypes, $\mu$ is an intercept, $\mathbf{u}$
+Here $\mathbf{G}$ is an $n\times n$ positive semi-definite relationship matrix (e.g., a genomic relationship matrix computed from markers, or a pedigree-based matrix), $\sigma^2_u$ is the variance parameter associated with $\mathbf{G}$, and $\sigma^2_\varepsilon$ is the residual variance.
+
+## Prior distributions
+
+The intercept is assigned a flat prior, $p(\mu)\propto 1$. The variance parameters are assigned independent scaled inverse chi-square priors,
+
+$$\sigma^2_u\sim\chi^{-2}(df_u,S_u),\qquad \sigma^2_\varepsilon\sim\chi^{-2}(df_\varepsilon,S_\varepsilon),$$
+
+where $df_\cdot$ and $S_\cdot$ are the degrees of freedom and scale parameters. By default, $df_u=df_\varepsilon=5$ and the scale parameters are chosen so that the prior mode of the variances is consistent with a proportion of variance explained of $R^2=0.5$ (the user can change this value):
+
+$$S_u=\frac{Var(\mathbf{y})\,R^2\,(df_u+2)}{\overline{\operatorname{diag}(\mathbf{G})}},\qquad S_\varepsilon=Var(\mathbf{y})\,(1-R^2)\,(df_\varepsilon+2),$$
+
+where $\overline{\operatorname{diag}(\mathbf{G})}$ is the average of the diagonal elements of $\mathbf{G}$. Dividing by this quantity makes the prior on $\sigma^2_u$ independent of the scale of $\mathbf{G}$.
+
 
 <div id="menu" />
   
