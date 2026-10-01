@@ -5,6 +5,8 @@ In the following example we show how to fit a GBLUP model (i.e., a Gaussian proc
 
 ## Model
 
+The simplest form of the GBLUP model (one record per subject, no fixed effects, one genomic relationship matrix (GRM) is as follows.
+
 $$\mathbf{y}=\mathbf{1}\mu+\mathbf{u}+\boldsymbol{\varepsilon}$$
 
 where $\mathbf{y}$ is an $n\times 1$ vector of phenotypes, $\mu$ is an intercept, $\mathbf{u}\sim MVN(\mathbf{0},\mathbf{G}\sigma^2_u)$ is a multivariate normal random vector with zero mean and a covariance matrix proportional to $\mathbf{G}$, and $\boldsymbol{\varepsilon}\sim MVN(\mathbf{0},\mathbf{I}\sigma^2_\varepsilon)$ is a vector of independent model residuals.
