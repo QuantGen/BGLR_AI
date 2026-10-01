@@ -13,7 +13,7 @@ where $\mathbf{y}$ is an $n\times 1$ vector of phenotypes, $\mu$ is an intercept
 
 Here $\mathbf{G}$ is an $n\times n$ positive semi-definite relationship matrix (e.g., a genomic relationship matrix computed from markers, or a pedigree-based matrix), $\sigma^2_u$ is the variance parameter associated with $\mathbf{G}$, and $\sigma^2_\varepsilon$ is the residual variance.
 
-#**Prior distributions**: The intercept is assigned a flat prior, $p(\mu)\propto 1$. The variance parameters are assigned independent scaled inverse chi-square priors,
+**Prior distributions**: The intercept is assigned a flat prior, $p(\mu)\propto 1$. The variance parameters are assigned independent scaled inverse chi-square priors,
 
 $$\sigma^2_u\sim\chi^{-2}(df_u,S_u),\qquad \sigma^2_\varepsilon\sim\chi^{-2}(df_\varepsilon,S_\varepsilon),$$
 
