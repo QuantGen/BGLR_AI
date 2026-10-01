@@ -199,6 +199,23 @@ fm7=BGLR( y=y,ETA=list(list(X=Rt,model='BRR',lower_tri=TRUE)),nIter=nIter,
 
 <div id="CholSparse" />
 
+## Skill: Fitting a genomic prediction model with BGLR
 
+> **Use when:** the user wants to fit, tune, or evaluate a genomic prediction model with BGLR (choosing priors, specifying `ETA`, checking convergence, cross-validation).
+
+### Workflow
+
+1. Specify the linear predictor through `ETA`, with one list element per term.
+2. Start with an intercept-only or BRR model as a baseline.
+3. Run enough iterations and check convergence (`nIter`, `burnIn`, `thin`).
+4. Validate with a training/testing split before trusting the results.
+
+### Examples
+
+- [An intercept only model](#an-intercept-only-model): baseline, no predictors.
+- [Bayesian ridge regression](#bayesian-ridge-regression): first model with markers.
+- [Convergence diagnostics](#convergence-diagnostics): checking the chains.
+
+### Common pitfalls
 
 [Back to examples](https://github.com/gdlc/BGLR-R/blob/master/README.md)
