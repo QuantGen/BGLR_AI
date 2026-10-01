@@ -21,7 +21,7 @@ where $df_\cdot$ and $S_\cdot$ are the degrees of freedom and scale parameters. 
 
 ## Parameterizations
 
-There are many equivalent ways to parameterize the model described aobve, as a Gaussian process (as described above), as a linear regression on SNPs, or as a linear regression of factorizations of the SNP ($\mathbf{X}$) or the genomic relationship matrix. Below we show six ways to fit the same model, each based on a specific parameterization. 
+There are many equivalent ways to parameterize a GBLUP model, as a Gaussian process (as described above), as a linear regression on SNPs, or as a linear regression of factorizations of the SNP ($\mathbf{X}$) or the genomic relationship matrix. Below we show six ways to fit the same model, each based on a specific parameterization. 
 
 <div id="menu" />
   
