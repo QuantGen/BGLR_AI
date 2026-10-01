@@ -25,20 +25,19 @@ There are many equivalent ways to parameterize the model described aobve, as a G
 
 <div id="menu" />
   
-   * [Using oringial inputs (e.g., SNPs)](#BRR)
-   * [Using a G-matrix (or kernel)](#RKHS)
-   * [Using eigenvalues and eigenvectors](#RKHS2)
-   * [Using scaled-principal components](#PC)
-   * [Using a Cholesky decomposition](#CHOL)
-   * [Using a QR decomposition](#QR)
-   * [Using a Cholesky decomposition and sparse matrix](#CholSparse)
+   * [1) Using oringial inputs (e.g., SNPs)](#BRR)
+   * [2) Using a G-matrix (or kernel)](#RKHS)
+   * [3) Using eigenvalues and eigenvectors](#RKHS2)
+   * [4) Using scaled-principal components](#PC)
+   * [5) Using a Cholesky decomposition](#CHOL)
+   * [6) Using a QR decomposition](#QR)
+
    
 
 <div id="BRR" />
 
 ---------------------------------------------
 **(i) Providing the markers, using `model='BRR'`**
-
 
 
 In this case BGLR asigns iid normal priors to the marker effects.
