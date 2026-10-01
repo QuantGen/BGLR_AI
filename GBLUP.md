@@ -13,12 +13,6 @@ where $\mathbf{y}$ is an $n\times 1$ vector of phenotypes, $\mu$ is an intercept
 
 Here $\mathbf{G}$ is an $n\times n$ positive semi-definite relationship matrix (e.g., a genomic relationship matrix computed from markers, or a pedigree-based matrix), $\sigma^2_u$ is the variance parameter associated with $\mathbf{G}$, and $\sigma^2_\varepsilon$ is the residual variance.
 
-**Prior distributions**: The intercept is assigned a flat prior, $p(\mu)\propto 1$. The variance parameters are assigned independent scaled inverse chi-square priors,
-
-$$\sigma^2_u\sim\chi^{-2}(df_u,S_u),\qquad \sigma^2_\varepsilon\sim\chi^{-2}(df_\varepsilon,S_\varepsilon),$$
-
-where $df_\cdot$ and $S_\cdot$ are the degrees of freedom and scale parameters. By default, $df_u=df_\varepsilon=5$ and the scale parameters are chosen so that the prior mode of the variances is consistent with a proportion of variance explained of $R^2=0.5$ (the user can change this value).
-
 ## Parameterizations
 
 There are many equivalent ways to parameterize a GBLUP model, as a Gaussian process (as described above), as a linear regression on SNPs, or as a linear regression of factorizations of the SNP ($\mathbf{X}$) or the genomic relationship matrix. Below we show six ways to fit the same model, each based on a specific parameterization. 
