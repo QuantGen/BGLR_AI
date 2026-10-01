@@ -35,10 +35,17 @@ There are many equivalent ways to parameterize the model described aobve, as a G
    
 
 <div id="BRR" />
-
 ---------------------------------------------
+
 **(i) Providing the markers, using `model='BRR'`**
 
+<!--chunk starts -->
+
+<!--kb
+agent: coding
+package: BGLR
+prompt: Fit a linear regression of a phenotype on SNPs using Gaussian iid priors.
+-->
 
 In this case BGLR asigns iid normal priors to the marker effects.
 
@@ -60,13 +67,22 @@ In this case BGLR asigns iid normal priors to the marker effects.
  varU=scan('brr_ETA_mrk_varB.dat')
  h2_1=varU/(varU+varE)
 ```
+<!--chunk ends -->
 [Menu](#menu)
+
+
 
 
 ---------------------------------------------
 <div id="RKHS" />
 
+<!--chunk starts -->
 **(2) Providing the G-matrix**
+<!--kb
+agent: coding
+package: BGLR
+prompt: Fit a GBLUP model using a relationship matrix (genomic or pedigree-derived)
+-->
 
 BGLR Fits these Gaussian models using the eigenvalue decomposition og G. The eigenvalue decomposition is computed internally using 
 `eigen()`.
@@ -80,6 +96,8 @@ BGLR Fits these Gaussian models using the eigenvalue decomposition og G. The eig
  varU=scan('eig_ETA_G_varU.dat')
  h2_2=varU/(varU+varE)
 ```
+<!--chunk ends -->
+
 [Menu](#menu)
 
 
