@@ -1,5 +1,5 @@
  
-#### Parametric Random Regression with BGLR
+#### Linear (random)Regression with BGLR
 
 The BGLR R-package allows users to select various priors for regression coefficients. The following priors are implemented in the BGLR function.
 
