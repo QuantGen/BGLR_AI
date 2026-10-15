@@ -11,9 +11,9 @@ Each chunk should represent a specific coding task or functionality so that the 
 
 Each Markdown file should contain:
 
-Introduction: An overview of the topic, its purpose, prerequisites, and expected outcome.
-Code chunks: Relevant explanations and code, separated by logical functionality.
-Skills (optional): Additional technical knowledge the AI may need to answer questions or generate code.
+- Introduction: An overview of the topic, its purpose, prerequisites, and expected outcome.
+- Code chunks: Relevant explanations and code, separated by logical functionality.
+- Skills (optional): Additional technical knowledge the AI may need to answer questions or generate code.
 Introduction
 
 Every Markdown file must have an introduction enclosed within the following markers:
