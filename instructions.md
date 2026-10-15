@@ -1,5 +1,5 @@
-BGLR RAG Knowledge Base: Chunking Guidelines
-1. Objective
+# BGLR RAG Knowledge Base: Chunking Guidelines
+## 1. Objective
 
 The goal is to build a Retrieval-Augmented Generation (RAG) LLM that helps users write, understand, and debug code using the BGLR library.
 
@@ -7,7 +7,7 @@ We are refactoring programs from Repo A into https://github.com/QuantGen/BGLR_AI
 
 Each chunk should represent a specific coding task or functionality so that the chatbot can retrieve the relevant code based on a user's question.
 
-2. Markdown File Structure
+## 2. Markdown File Structure
 
 Each Markdown file should contain:
 
@@ -20,7 +20,7 @@ Every Markdown file must have an introduction enclosed within the following mark
 
 <!--intro starts -->
 
-# Page Title
+### Page Title
 
 Describe the purpose of the page, the functionality covered,
 any prerequisites, and the expected outcome.
@@ -30,7 +30,7 @@ any prerequisites, and the expected outcome.
 
 The introduction should describe the overall topic, not just an individual code block.
 
-3. Code Chunk Metadata
+## 3. Code Chunk Metadata
 
 Every code group must have a metadata block immediately before its chunk-start marker.
 
@@ -63,7 +63,7 @@ How do I estimate genomic breeding values using BRR?
 
 Each prompt must accurately describe the functionality implemented in the corresponding code chunk. Avoid redundant prompts or prompts describing functionality that the code does not support.
 
-4. Chunk Boundaries
+## 4. Chunk Boundaries
 
 Enclose every code group within:
 
@@ -82,7 +82,7 @@ Keep related code together when it is required to understand or execute the task
 
 Each chunk should include enough context to be useful when retrieved independently, including relevant explanations, required inputs, dependencies, code, and expected outputs.
 
-5. Optional Skills Section
+## 5. Optional Skills Section
 
 Use the following markers when additional knowledge may help the chatbot answer questions or generate correct code:
 
@@ -100,7 +100,7 @@ Use the following markers when additional knowledge may help the chatbot answer 
 
 Include only skills relevant to the page. This section is optional.
 
-6. Markdown Template
+## 6. Markdown Template
 
 Use this template for new or refactored files:
 
