@@ -35,17 +35,19 @@ The introduction should describe the overall topic, not just an individual code 
 
 ## 4. Code Chunk Metadata
 
-Every code group must have a metadata block immediately before its chunk-start marker.
+Every code group must have a metadata block immediately after its chunk-start marker.
 
 Use this format:
 ```
+
+<!--chunk starts -->
+
 <!--kb
 agent: coding
 package: BGLR
 prompt: Fit a Bayesian Ridge Regression model using BGLR.
 prompt: Run BRR using a genomic relationship matrix.
 -->
-<!--chunk starts -->
 
 Insert the explanation and relevant code here.
 
@@ -54,9 +56,9 @@ Insert the explanation and relevant code here.
 agent: Keep the value as coding.
 package: Keep the value as BGLR.
 prompt: Describe what the code does using natural language that reflects questions users might ask.
-Writing prompts
-```
 
+```
+Writing prompts
 A chunk can have multiple prompts if users may ask about the same functionality in different ways.
 
 For example:
@@ -74,13 +76,7 @@ Enclose every code group within:
 Start: <!--chunk starts -->
 End: <!--chunk ends -->
 ```
-Each chunk should represent one logical coding task, such as:
-
-Preparing input data.
-Constructing a genomic relationship matrix.
-Configuring and fitting a BGLR model.
-Extracting predictions or model results.
-Evaluating model performance.
+Each chunk should represent one logical coding task
 
 Keep related code together when it is required to understand or execute the task. Avoid splitting code into tiny, disconnected pieces.
 
@@ -119,13 +115,15 @@ and the expected outcome.
 
 ## [Code Group Title]
 
+
+<!--chunk starts -->
+
 <!--kb
 agent: coding
 package: BGLR
 prompt: [Describe what the code does.]
 prompt: [Add another relevant user question, if needed.]
 -->
-<!--chunk starts -->
 
 ### Purpose
 
