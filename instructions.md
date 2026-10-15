@@ -15,7 +15,7 @@ Each Markdown file should contain:
 - Code chunks: Relevant explanations and code, separated by logical functionality.
 - Skills (optional): Additional technical knowledge the AI may need to answer questions or generate code.
 
-### Introduction
+## 3. Introduction
 
 Every Markdown file must have an introduction enclosed within the following markers:
 ```
@@ -33,7 +33,7 @@ any prerequisites, and the expected outcome.
 The introduction should describe the overall topic, not just an individual code block.
 
 
-### 3. Code Chunk Metadata
+## 4. Code Chunk Metadata
 
 Every code group must have a metadata block immediately before its chunk-start marker.
 
@@ -67,13 +67,13 @@ How do I estimate genomic breeding values using BRR?
 
 Each prompt must accurately describe the functionality implemented in the corresponding code chunk. Avoid redundant prompts or prompts describing functionality that the code does not support.
 
-## 4. Chunk Boundaries
+## 5. Chunk Boundaries
 
 Enclose every code group within:
-
+```
 Start: <!--chunk starts -->
 End: <!--chunk ends -->
-
+```
 Each chunk should represent one logical coding task, such as:
 
 Preparing input data.
@@ -86,7 +86,7 @@ Keep related code together when it is required to understand or execute the task
 
 Each chunk should include enough context to be useful when retrieved independently, including relevant explanations, required inputs, dependencies, code, and expected outputs.
 
-## 5. Optional Skills Section
+## 6. Optional Skills Section
 
 Use the following markers when additional knowledge may help the chatbot answer questions or generate correct code:
 ```
@@ -104,7 +104,7 @@ Use the following markers when additional knowledge may help the chatbot answer 
 
 Include only skills relevant to the page. This section is optional.
 
-## 6. Markdown Template
+## 7. Markdown Template
 
 Use this template for new or refactored files:
 ```
