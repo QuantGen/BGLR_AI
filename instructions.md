@@ -1,7 +1,7 @@
 # BGLR RAG Knowledge Base: Chunking Guidelines
 ## 1. Objective
 
-The goal is to build a Retrieval-Augmented Generation (RAG) LLM that helps non-technical users write and understand using the BGLR library.
+The goal is to build a Retrieval-Augmented Generation (RAG) LLM that helps non-technical users write and understand code using the BGLR library.
 
 We are refactoring programs from https://github.com/gdlc/BGLR-R/ into https://github.com/QuantGen/BGLR_AI, organizing them into Markdown files with logically separated code chunks.
 
@@ -14,7 +14,8 @@ Each Markdown file should contain:
 - Introduction: An overview of the topic, its purpose, prerequisites, and expected outcome.
 - Code chunks: Relevant explanations and code, separated by logical functionality.
 - Skills (optional): Additional technical knowledge the AI may need to answer questions or generate code.
-Introduction
+
+### Introduction
 
 Every Markdown file must have an introduction enclosed within the following markers:
 ```
@@ -32,7 +33,7 @@ any prerequisites, and the expected outcome.
 The introduction should describe the overall topic, not just an individual code block.
 
 
-## 3. Code Chunk Metadata
+### 3. Code Chunk Metadata
 
 Every code group must have a metadata block immediately before its chunk-start marker.
 
