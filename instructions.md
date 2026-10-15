@@ -1,7 +1,7 @@
 # BGLR RAG Knowledge Base: Chunking Guidelines
 ## 1. Objective
 
-The goal is to build a Retrieval-Augmented Generation (RAG) LLM that helps users write, understand, and debug code using the BGLR library.
+The goal is to build a Retrieval-Augmented Generation (RAG) LLM that helps non-technical users write and understand using the BGLR library.
 
 We are refactoring programs from https://github.com/gdlc/BGLR-R/ into https://github.com/QuantGen/BGLR_AI, organizing them into Markdown files with logically separated code chunks.
 
