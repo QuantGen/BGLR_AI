@@ -37,7 +37,7 @@ The introduction should describe the overall topic, not just an individual code 
 Every code group must have a metadata block immediately before its chunk-start marker.
 
 Use this format:
-
+```
 <!--kb
 agent: coding
 package: BGLR
@@ -54,6 +54,7 @@ agent: Keep the value as coding.
 package: Keep the value as BGLR.
 prompt: Describe what the code does using natural language that reflects questions users might ask.
 Writing prompts
+```
 
 A chunk can have multiple prompts if users may ask about the same functionality in different ways.
 
@@ -87,7 +88,7 @@ Each chunk should include enough context to be useful when retrieved independent
 ## 5. Optional Skills Section
 
 Use the following markers when additional knowledge may help the chatbot answer questions or generate correct code:
-
+```
 <!--skill starts -->
 
 ### Skills Required
@@ -98,14 +99,14 @@ Use the following markers when additional knowledge may help the chatbot answer 
 - Genomic prediction and relationship matrices
 
 <!--skill ends -->
-
+```
 
 Include only skills relevant to the page. This section is optional.
 
 ## 6. Markdown Template
 
 Use this template for new or refactored files:
-
+```
 <!--intro starts -->
 
 # [Page Title]
@@ -152,6 +153,6 @@ Explain the expected results.
 
 <!--skill ends -->
 
-
+```
 Repeat the code chunk section as many times as needed. Include the skills section only when useful.
 
