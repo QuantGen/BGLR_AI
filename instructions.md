@@ -3,7 +3,7 @@
 
 The goal is to build a Retrieval-Augmented Generation (RAG) LLM that helps users write, understand, and debug code using the BGLR library.
 
-We are refactoring programs from Repo A into https://github.com/QuantGen/BGLR_AI, organizing them into Markdown files with logically separated code chunks.
+We are refactoring programs from https://github.com/gdlc/BGLR-R/ into https://github.com/QuantGen/BGLR_AI, organizing them into Markdown files with logically separated code chunks.
 
 Each chunk should represent a specific coding task or functionality so that the chatbot can retrieve the relevant code based on a user's question.
 
