@@ -17,18 +17,20 @@ Skills (optional): Additional technical knowledge the AI may need to answer ques
 Introduction
 
 Every Markdown file must have an introduction enclosed within the following markers:
-
+```
 <!--intro starts -->
 
-### Page Title
+# Page Title
 
 Describe the purpose of the page, the functionality covered,
 any prerequisites, and the expected outcome.
 
 <!--intro ends -->
+```
 
 
 The introduction should describe the overall topic, not just an individual code block.
+
 
 ## 3. Code Chunk Metadata
 
