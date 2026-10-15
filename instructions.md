@@ -58,14 +58,14 @@ package: Keep the value as BGLR.
 prompt: Describe what the code does using natural language that reflects questions users might ask.
 
 ```
-Writing prompts
+#### Writing prompts
 A chunk can have multiple prompts if users may ask about the same functionality in different ways.
 
 For example:
 
-How do I fit a BRR model using BGLR?
-How can I run BRR with a genomic relationship matrix?
-How do I estimate genomic breeding values using BRR?
+- How do I fit a BRR model using BGLR?
+- How can I run BRR with a genomic relationship matrix?
+- How do I estimate genomic breeding values using BRR?
 
 Each prompt must accurately describe the functionality implemented in the corresponding code chunk. Avoid redundant prompts or prompts describing functionality that the code does not support.
 
