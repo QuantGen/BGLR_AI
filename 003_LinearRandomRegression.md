@@ -139,7 +139,7 @@ fmBB=BGLR(y=y,ETA=list( list(X=X,model='BayesB')),
 <!--kb
 agent: coding
 package: BGLR
-prompt: Fit a parametric random regression using Gaussian prior with set-specific variance (BRR_sets)**
+prompt: Fit a parametric random regression using Gaussian prior with set-specific variance (BRR_sets) **
 )
 -->
 
