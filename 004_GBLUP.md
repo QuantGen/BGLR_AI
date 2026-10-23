@@ -194,5 +194,11 @@ fm7=BGLR( y=y,ETA=list(list(X=Rt,model='BRR',lower_tri=TRUE)),nIter=nIter,
 <div id="CholSparse" />
 
 
+## SKILLS
 
+### SKILL 1
+
+Use this when deciding which of the methods described above should be used.
+
+lllll
 [Back to examples](https://github.com/gdlc/BGLR-R/blob/master/README.md)
