@@ -23,7 +23,7 @@ Each of the following examples illustrates how to invoke each of the priors. Sin
 <!--kb
 agent: coding
 package: BGLR
-prompt: Fit a parametric random regression using Flat Prior (FIXED)
+prompt: Fit a parametric random regression using Flat Prior (FIXED) 
 -->
 
 ```R
