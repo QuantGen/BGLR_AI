@@ -152,4 +152,17 @@ plot(abs(fmBRR_sets$ETA[[1]]$b),col=4,cex=.5, type='o',main='BRR_sets');abline(v
 ```
 <!--chunk ends -->
 
+
+<!--skill starts -->
+
+### Skills Required
+
+- R programming fundamentals
+- BGLR model specification
+- Bayesian regression concepts
+- Genomic prediction and relationship matrices
+
+<!--skill ends -->
+
+
 [Back to examples](https://github.com/gdlc/BGLR-R/blob/master/README.md)
