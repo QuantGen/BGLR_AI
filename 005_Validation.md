@@ -68,14 +68,14 @@ package: BGLR
 prompt: Mask the response variable for our test set and fit a linear model
 -->
 
-## Maksing response variables (y)
+## Masking response variables (y)
 
 For our first approach, we will mask the response values (y) inside our test set by setting them to NA.
 
 BGLR will deal with this missing data problems internally.
 
 ```R
-  # Mask response varaible (y) in our test set
+  # Mask response variable (y) in our test set
   yNA=y
   yNA[tst]=NA
   
@@ -104,7 +104,7 @@ Next, we will use genomic relationships within our data set to make predictions 
 id: Validation-Training and testing sets
 agent: coding
 package: BGLR
-prompt: Fit a linear regression on training data and use results to make predictions of response variable in the test set
+prompt: Fit a linear regression model on training data and use results to make predictions of response variable in the test set
 -->
 
 ### Define training and testing data
@@ -181,7 +181,7 @@ processing using multiple cores.
 id: Validation-Cross fold validation in a loop
 agent: coding
 package: BGLR
-prompt: Use a loop to do cross fold validation where the response variable is masked withing each fold and used to fit a lienar model
+prompt: Use a loop to do cross fold validation where the response variable is masked withing each fold and used to fit a linear model
 -->
 
 Here we define our folds, then iteratively run each one through BGLR inside of for loop which
@@ -225,7 +225,7 @@ prompt: Use parallel processing to do cross fold validation where the response v
 
 Using the same folds as above, will we now run cross-fold validation in parallel using multiples core.
 
-There are important considerations when using a paralle approach:
+There are important considerations when using a parallel approach:
 
 - Because each fold is being run in parallel, we will need to define a function which selects the proper fold,
 runs the validation and returns the results for that fold
