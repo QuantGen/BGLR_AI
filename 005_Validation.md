@@ -12,7 +12,7 @@ In the following examples we demonstrate how to make predictions by:
 - Using a genomic relationship matrix (G-matrix)
 - Cross-fold validation using for loops and parallel processing
 
-<!--intro ends -->
+
 
 ### Menu
 
@@ -57,6 +57,8 @@ Before doing validation, we need to load BGLR and select of subset of samples as
 
 <!--chunk ends -->
 
+<!--intro ends -->
+
 <div id="Mask" />
 
 <!--chunk starts -->
@@ -92,13 +94,13 @@ BGLR will deal with this missing data problems internally.
 
 <!--chunk ends -->
 
+
+<!--chunk starts -->
 <div id="Gmat" />
 
 ## Using genomic relationships
 
 Next, we will use genomic relationships within our data set to make predictions within the test set
-
-<!--chunk starts -->
 
 <!--kb
 id: Validation-Training and testing sets
@@ -124,10 +126,6 @@ We can also make predictions WITHOUT using genomic relationships (yHat_2), which
   fm2=BGLR(y=yTRN,ETA=list(list(X=X.TRN,model='BRR')),nIter=6000,burnIn=1000)
   yHat_2=fm2$mu+as.vector(X.TST%*%fm2$ETA[[1]]$b)
 ```
-
-<!--chunk ends -->
-
-<!--chunk starts -->
 
 <!--kb
 id: Validation-Genetic relationships
@@ -157,7 +155,10 @@ Now, we use genomic relationships to make predictions using genetic relationship
   print("Correlation between validation approaches")
   cor(cbind(yHat_1,yHat_2,yHat_3))
 ```
+
 <!--chunk ends -->
+
+<!--chunk starts -->
 
 <div id="Cross" />
 
@@ -173,7 +174,7 @@ are masked for that run.
 We will also consider two implementations of cross-fold validation, one using a loop and one using parallel
 processing using multiple cores.
 
-<!--chunk starts -->
+
 
 ### Using a loop
 
@@ -210,9 +211,6 @@ adds the results to a predefined (yHatCV) vector
   print("Run Time (seconds)")
   print(proc.time()[3]-timeIn)
 ```
-<!--chunk ends -->
-
-<!--chunk starts -->
 
 <!--kb
 id: Validation-Cross fold validation in a loop
@@ -268,3 +266,5 @@ fold (this is why its important that we define folds beforehand)
    print("Correlation of for-loop vs. parallel")
    cor(yHatCV,yHatCV2)
 ```
+
+<!--chunk ends -->
