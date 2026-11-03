@@ -70,9 +70,7 @@ prompt: Mask the response variable for our test set and fit a linear model
 
 ## Masking response variables (y)
 
-For our first approach, we will mask the response values (y) inside our test set by setting them to NA.
-
-BGLR will deal with this missing data problems internally.
+For our first approach, we will mask the response values (y) inside our test set by setting them to NA. Internally, BGLR treats missing phenotype values as any other unknown: in every sample the missing values are sampled from the corresponding fully conditional distributions. The software returns posterior means for the linear predictor (`$yHat`) for all the observations, including those that had missing values.
 
 ```R
   # Mask response variable (y) in our test set
