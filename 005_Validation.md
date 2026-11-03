@@ -2,13 +2,11 @@
 
 # Three ways of producing predictions in validation data using BGLR
 
-Validation involves making prediction of known phenotype or response variable without
-exposing that information to the model. This is an important approach to evaluating the
-reliability of a modeling approach.
+Validation involves using a trained model to predict the phenotype (or genetic value) of individuals whose phenotypes were not used in model training, and then comparing those predictions with the observed values (or with the true genetic values, in simulation).
 
-In the following examples we demonstrate how to make predictions by:
+In the following examples we demonstrate how this can be made using two approaches:
 
-- Masking response (y) variables to make within a test set
+- Masking phenotype values of the test set in the response (y) variable.
 - Using a genomic relationship matrix (G-matrix)
 - Cross-fold validation using for loops and parallel processing
 
