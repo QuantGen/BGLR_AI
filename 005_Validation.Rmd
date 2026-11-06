@@ -43,7 +43,7 @@ Throughout, we use the notation `y` (phenotypes), `X` (marker genotypes), `G` (g
        * [2.1) K-fold cross-validation](#Cross)
        * [2.2) Replicated training-testing partitions](#Replicated)
    * [3) Comparing models](#Compare)
-   * [4) Measures of prediction accuracy](#Accuracy)
+   * [4) Measures of prediction accuracy][WIP](#Accuracy)
 
 <div id="Setup" />
 
